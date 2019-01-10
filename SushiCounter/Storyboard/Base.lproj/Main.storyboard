@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SushiCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="32408-sushi-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-nm-PR9">
+                                <rect key="frame" x="97.5" y="60" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="YBc-bP-UAH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="mlf-ax-BCy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="sYg-XD-Yeh"/>
+                                    <constraint firstAttribute="width" constant="180" id="sjZ-DE-Vbc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYP-c6-D4R">
+                                <rect key="frame" x="80" y="280" width="215" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.93828243020000002" green="0.27540788049999998" blue="0.28109896179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-jo-f2T">
+                                <rect key="frame" x="140.5" y="380" width="94" height="29"/>
+                                <color key="tintColor" red="0.93828243020000002" green="0.27540788049999998" blue="0.28109896179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oYP-c6-D4R" firstAttribute="top" secondItem="4Gx-nm-PR9" secondAttribute="bottom" constant="40" id="2qJ-oT-e8L"/>
+                            <constraint firstItem="USZ-jo-f2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6jB-do-EuO"/>
+                            <constraint firstItem="USZ-jo-f2T" firstAttribute="top" secondItem="oYP-c6-D4R" secondAttribute="bottom" constant="40" id="Dau-jz-cZV"/>
+                            <constraint firstItem="4Gx-nm-PR9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="EmB-jg-MFv"/>
+                            <constraint firstItem="oYP-c6-D4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="HZB-mK-Rqr"/>
+                            <constraint firstItem="4Gx-nm-PR9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IaV-Pe-vda"/>
+                            <constraint firstItem="oYP-c6-D4R" firstAttribute="top" secondItem="4Gx-nm-PR9" secondAttribute="bottom" constant="40" id="IoD-lT-eKv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oYP-c6-D4R" secondAttribute="trailing" constant="80" id="qJh-n0-oYu"/>
+                            <constraint firstItem="oYP-c6-D4R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t2Q-Y4-wbc"/>
+                            <constraint firstItem="USZ-jo-f2T" firstAttribute="top" secondItem="oYP-c6-D4R" secondAttribute="bottom" constant="40" id="tHz-0U-iKY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="32408-sushi-icon" width="96" height="96"/>
+    </resources>
+</document>
