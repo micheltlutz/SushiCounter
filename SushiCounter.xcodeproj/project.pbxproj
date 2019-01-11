@@ -15,6 +15,8 @@
 		D0D16BE321E793BE00898F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D16BE121E793BE00898F12 /* LaunchScreen.storyboard */; };
 		D0D16BEE21E7A6C600898F12 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D16BED21E7A6C600898F12 /* DateUtils.swift */; };
 		D0D16BF021E7A70400898F12 /* SushiDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D16BEF21E7A70300898F12 /* SushiDayViewModel.swift */; };
+		D0E741BE21E8025D00D50B38 /* SushiDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E741BD21E8025D00D50B38 /* SushiDay.swift */; };
+		D0E741C021E802BE00D50B38 /* SushisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E741BF21E802BE00D50B38 /* SushisTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		D0D16BE421E793BE00898F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D16BED21E7A6C600898F12 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D0D16BEF21E7A70300898F12 /* SushiDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SushiDayViewModel.swift; sourceTree = "<group>"; };
+		D0E741BD21E8025D00D50B38 /* SushiDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiDay.swift; sourceTree = "<group>"; };
+		D0E741BF21E802BE00D50B38 /* SushisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SushisTableViewController.swift; sourceTree = "<group>"; };
 		DD580CB886D1A15E1920B1CB /* Pods-SushiCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SushiCounter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SushiCounter/Pods-SushiCounter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 		D0D16BD721E793BA00898F12 /* SushiCounter */ = {
 			isa = PBXGroup;
 			children = (
+				D0E741BC21E8024A00D50B38 /* Models */,
 				D0D16BEC21E7A6B600898F12 /* Controller */,
 				D0D16BEB21E7A66000898F12 /* Storyboard */,
 				D0D16BEA21E7A64D00898F12 /* ViewModel */,
@@ -113,9 +118,18 @@
 		D0D16BEC21E7A6B600898F12 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0E741BF21E802BE00D50B38 /* SushisTableViewController.swift */,
 				D0D16BDA21E793BA00898F12 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0E741BC21E8024A00D50B38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0E741BD21E8025D00D50B38 /* SushiDay.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +254,9 @@
 			files = (
 				D0D16BDB21E793BA00898F12 /* ViewController.swift in Sources */,
 				D0D16BF021E7A70400898F12 /* SushiDayViewModel.swift in Sources */,
+				D0E741BE21E8025D00D50B38 /* SushiDay.swift in Sources */,
 				D0D16BEE21E7A6C600898F12 /* DateUtils.swift in Sources */,
+				D0E741C021E802BE00D50B38 /* SushisTableViewController.swift in Sources */,
 				D0D16BD921E793BA00898F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L8WPWWVB6;
 				INFOPLIST_FILE = SushiCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.SushiCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -410,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L8WPWWVB6;
 				INFOPLIST_FILE = SushiCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.SushiCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

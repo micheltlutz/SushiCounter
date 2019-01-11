@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mWE-ZC-HQe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SushiCounter" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYP-c6-D4R">
-                                <rect key="frame" x="80" y="280" width="215" height="60"/>
+                                <rect key="frame" x="172" y="280" width="31" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.93828243020000002" green="0.27540788049999998" blue="0.28109896179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -36,6 +35,9 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-jo-f2T">
                                 <rect key="frame" x="140.5" y="380" width="94" height="29"/>
                                 <color key="tintColor" red="0.93828243020000002" green="0.27540788049999998" blue="0.28109896179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="stepperCounter:" destination="BYZ-38-t0r" eventType="valueChanged" id="oca-zd-JzU"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,21 +46,96 @@
                             <constraint firstItem="USZ-jo-f2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6jB-do-EuO"/>
                             <constraint firstItem="USZ-jo-f2T" firstAttribute="top" secondItem="oYP-c6-D4R" secondAttribute="bottom" constant="40" id="Dau-jz-cZV"/>
                             <constraint firstItem="4Gx-nm-PR9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="EmB-jg-MFv"/>
-                            <constraint firstItem="oYP-c6-D4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="HZB-mK-Rqr"/>
+                            <constraint firstItem="oYP-c6-D4R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HZB-mK-Rqr"/>
                             <constraint firstItem="4Gx-nm-PR9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IaV-Pe-vda"/>
                             <constraint firstItem="oYP-c6-D4R" firstAttribute="top" secondItem="4Gx-nm-PR9" secondAttribute="bottom" constant="40" id="IoD-lT-eKv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oYP-c6-D4R" secondAttribute="trailing" constant="80" id="qJh-n0-oYu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oYP-c6-D4R" secondAttribute="trailing" id="qJh-n0-oYu"/>
                             <constraint firstItem="oYP-c6-D4R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t2Q-Y4-wbc"/>
                             <constraint firstItem="USZ-jo-f2T" firstAttribute="top" secondItem="oYP-c6-D4R" secondAttribute="bottom" constant="40" id="tHz-0U-iKY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="sushi" id="U23-tt-Nuo"/>
+                    <connections>
+                        <outlet property="lbCounter" destination="oYP-c6-D4R" id="9Au-NO-c91"/>
+                        <outlet property="stepper" destination="USZ-jo-f2T" id="w2s-K5-Moz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kuL-xP-bna">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mWE-ZC-HQe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lMP-6b-Vte">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.93828243020000002" green="0.27540788049999998" blue="0.28109896179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8RR-Yx-YC0"/>
+                        <segue destination="raA-vN-55i" kind="relationship" relationship="viewControllers" id="vfv-7B-UQm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAn-B8-uK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Histórico-->
+        <scene sceneID="cl4-1g-j8S">
+            <objects>
+                <tableViewController id="raA-vN-55i" customClass="SushisTableViewController" customModule="SushiCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P4A-jV-2pb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSushi" textLabel="zBp-wT-n2e" detailTextLabel="fCX-j2-li3" style="IBUITableViewCellStyleSubtitle" id="sXT-Gf-EIh">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sXT-Gf-EIh" id="iqi-1P-tVx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zBp-wT-n2e">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fCX-j2-li3">
+                                            <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="raA-vN-55i" id="2sX-ms-XRy"/>
+                            <outlet property="delegate" destination="raA-vN-55i" id="xkg-BG-3ox"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Histórico" image="alarm" id="VOo-rY-gnT">
+                        <color key="badgeColor" red="0.93828243020000002" green="0.27540788049999998" blue="0.28109896179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g25-vC-CT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="824"/>
         </scene>
     </scenes>
     <resources>
         <image name="32408-sushi-icon" width="96" height="96"/>
+        <image name="alarm" width="32" height="32"/>
+        <image name="sushi" width="24" height="24"/>
     </resources>
 </document>
